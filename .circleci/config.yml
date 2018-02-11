@@ -1,9 +1,14 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/materialize-hakyll
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: futtetennista/hakyll:4.9.8.0
+
     steps:
       - checkout
       - run: echo "A first hello"
       - run: bash detect-pr.sh
+      - run:
+          name: detect using haskell
+          command: stack runghc detect-pr.hs
