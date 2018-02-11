@@ -12,3 +12,4 @@ jobs:
       - run:
           name: detect using haskell
           command: stack runghc detect-pr.hs
+      - run: echo "test"
