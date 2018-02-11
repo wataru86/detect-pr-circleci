@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/materialize-hakyll
     docker:
-      - image: futtetennista/hakyll:4.9.8.0
+      - image: fpco/stack-build
 
     steps:
       - checkout
@@ -12,6 +12,5 @@ jobs:
       - run:
           name: detect using haskell
           command: |
-            stack upgrade
             ./.circleci/script.hs
       - run: echo "test"
