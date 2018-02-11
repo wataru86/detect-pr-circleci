@@ -11,5 +11,5 @@ jobs:
       - run: bash detect-pr.sh
       - run:
           name: detect using haskell
-          command: stack runghc detect-pr.hs
+          command: ./.circleci/script.hs
       - run: echo "test"
