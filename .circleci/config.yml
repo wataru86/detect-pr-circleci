@@ -6,4 +6,4 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
-      - run: sh detect-pr.sh
+      - run: bash detect-pr.sh
