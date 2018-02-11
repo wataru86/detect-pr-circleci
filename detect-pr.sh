@@ -8,3 +8,5 @@ then
 else
     echo "not pull request"
 fi
+
+echo "This is pull request !"
