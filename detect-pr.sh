@@ -2,7 +2,7 @@
 
 echo "detect pull request"
 
-if ["$CI_PULL_REQUEST" == true]
+if [ "$CIRCLE_PULL_REQUEST" == true ]
 then
     echo "pull request"
 else
