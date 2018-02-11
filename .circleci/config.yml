@@ -9,8 +9,9 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: bash detect-pr.sh
-      - run: stack --version
       - run:
           name: detect using haskell
-          command: ./.circleci/script.hs
+          command: |
+            stack upgrade
+            ./.circleci/script.hs
       - run: echo "test"
