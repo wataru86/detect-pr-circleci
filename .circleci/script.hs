@@ -3,15 +3,17 @@
 
 module Main where
 import System.Environment
-
+import Turtle
 --import Data.Maybe
 
 main :: IO ()
 main = do
+  setEnv "CIRCLE_PULL_REQUEST" "test"
   pullRequestUrl <- lookupEnv "CIRCLE_PULL_REQUEST"
   maybe (putStrLn "This build is not PR.") main' pullRequestUrl
 
 main' :: String -> IO ()
 main' pullRequestUrl = do
   putStrLn ("PR: " ++ pullRequestUrl)
-  
+  p <-  pwd
+  view $ ls p
