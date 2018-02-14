@@ -17,3 +17,5 @@ main' pullRequestUrl = do
   putStrLn ("PR: " ++ pullRequestUrl)
   p <-  pwd
   view $ ls p
+  view $ shell "curl" empty
+  view $ pwd
