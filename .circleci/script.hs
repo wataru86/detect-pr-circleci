@@ -18,3 +18,4 @@ main' pullRequestUrl = do
   p <-  pwd
   view $ ls p
   view $ shell "curl" empty
+  view $ pwd
